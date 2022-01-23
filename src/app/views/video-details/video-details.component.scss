@@ -1,58 +1,51 @@
 .video-details{
-    &-home-button{
-        border-bottom: 1px solid #efefef;
-        padding: 10px 7rem;
-        a{
-            color: #999;
-            text-decoration: none;
-            mat-icon{
-                font-size: 30px;
-                color: #27963a;
-            }
-        }
-    }
-
+    background-color: #efefef;
     &-video{
         text-align: center;
-        padding: 20;
         display: flex;
-        .wrapper{
-            width: 60%;
-            height: 60vh;
-            background-color: #39CCCC;
-            margin: 0 auto;
-            margin-top: 5rem;
-            position: relative;
-            @media (max-width: 991px) {
-
-            }
-            @media (max-width: 600px) {
-
-            }
-        }
+        background-color: #212121;
+        height: 70vh;
         iframe{
             height: 100%;
             width: 100%;
-            margin-top: 1rem;
-            margin-left: 1rem;
         }
     }
     &-wrapper{
         margin-top: 3rem;
-        margin-bottom: 3rem;
-        .title{
-            font-weight: bold;
-            font-size: 2rem;
-            text-align: center;
-            line-height: 55px;
-            margin-bottom: 2rem;
+        padding-bottom: 3rem;
+        @media (max-width: 991px) {
+            margin-top: 1rem;
         }
-
-        .details{
-            padding-bottom: 10rem;
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        button{
+            background-color: #27963a;
+        }
+        mat-icon{
+            padding-left: 9px;
+        }
+        mat-card-content{
+            padding-top: 2rem;
+        }
+        .card{
+            margin-top: 3rem;
+            @media (max-width: 991px) {
+                margin-top: 1rem;
+            }
+        }
+        mat-card-title{
+            font-weight: bold;
+            padding-top: 20px;
+            line-height: 31px;
+        }
+        mat-card-content{
             font-size: 16px;
-            text-align: center;
             line-height: 28px;
         }
     }
+}
+.mat-button-wrapper{
+    padding: 14px 0 16px 10px!important;
 }

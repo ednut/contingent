@@ -5,9 +5,8 @@
         <mat-grid-list 
             rowHeight="250px"
             gutterSize="20px" 
-            [cols]="breakpoint"
-            style="margin-top: 4rem;">
-            <mat-grid-tile *ngFor="let video of videos">
+            [cols]="breakpoint">
+            <mat-grid-tile class="shadow" *ngFor="let video of videos">
                 <div class="card">
                     <a routerLink="details/{{video.resourceId.videoId}}">
                         <div class="img" style="background-image: url({{video.thumbnails.medium.url}})"></div>

@@ -1,14 +1,18 @@
 <div class="video-details" *ngIf="details">
-    <div class="video-details-home-button container">
-        <a routerLink="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
-    </div>
     <div class="video-details-video">
-        <div class="wrapper">
-            <iframe [src]="url | safe" title="{{details.title}}" frameborder="0"></iframe>
-        </div>
+        <iframe [src]="url | safe" title="{{details.title}}" frameborder="0"></iframe>
     </div>
     <div class="video-details-wrapper container">
-        <div class="title">{{details.title}}</div>
-        <div class="details">{{details.description}}</div>
+        <button mat-fab color="warn" aria-label="home icon">
+            <a routerLink="/"><mat-icon aria-hidden="false" aria-label="home icon">arrow_back_ios</mat-icon></a>
+        </button>
+        <mat-card class="card">
+            <mat-card-title-group>
+              <mat-card-title>{{details.title}}</mat-card-title>
+            </mat-card-title-group>
+            <mat-card-content>
+                {{details.description}}
+            </mat-card-content>
+          </mat-card>
     </div>
 </div>
