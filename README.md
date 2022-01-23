@@ -14,7 +14,7 @@ Start the development server
 
 ## Preview
 
-https://dazzling-borg-c5d683.netlify.app/
+https://vibrant-archimedes-2c9360.netlify.app
 
 ## Test
 
