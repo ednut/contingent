@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { YoutubeService } from 'src/app/services/youtube-service/youtube.service';
+import { YoutubeService } from '../../services/youtube-service/youtube.service';
 
 @Component({
   selector: 'app-video-details',
