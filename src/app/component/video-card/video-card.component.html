@@ -1,0 +1,20 @@
+<div class="video-card">
+    <div class="container">
+        <div class="video-card-title">African cup of nations</div>
+        <div class="video-card-caption">Cameroon 2021</div>
+        <mat-grid-list 
+            rowHeight="250px"
+            gutterSize="20px" 
+            [cols]="breakpoint"
+            style="margin-top: 4rem;">
+            <mat-grid-tile *ngFor="let video of videos">
+                <div class="card">
+                    <a routerLink="details/{{video.resourceId.videoId}}">
+                        <div class="img" style="background-image: url({{video.thumbnails.medium.url}})"></div>
+                        <div class="title">{{video.title}}</div>
+                    </a>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>

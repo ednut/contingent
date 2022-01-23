@@ -1,0 +1,16 @@
+<mat-grid-list *ngIf="details"
+    rowHeight="100vh"
+    gutterSize="0px" 
+    [cols]="2">
+
+    <mat-grid-tile class="width-60">
+        <iframe width="1280" height="720" [src]="url | safe" title="{{details.title}}" frameborder="0"></iframe>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="width-40">
+        <div>
+            <h1>{{details.title}}</h1><hr>
+            <div>{{details.description}}</div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,43 @@
+.video-card{
+    padding: 4rem 0;
+    background: #efefef;
+    &-title{
+        text-align: center;
+        color: #27963a;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+    &-caption{
+        text-align: center;
+        color: #e30612;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    .card{
+        background-color: #fff;
+        a{
+            text-decoration: none;
+        }
+        .img{
+            width: 384px;
+            height: 186px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 3px 3px 0 0;
+        }
+        .title{
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 26px;
+            text-align: center;
+            border-radius: 0 0 4px 4px;
+        }
+    }
+}
