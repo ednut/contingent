@@ -1,19 +1,20 @@
 <div class="video-card">
     <div class="container">
         <div class="video-card-title">African cup of nations</div>
-        <div class="video-card-caption">Cameroon 2021</div>
-        <mat-grid-list 
-            rowHeight="250px"
-            gutterSize="20px" 
-            [cols]="breakpoint">
-            <mat-grid-tile class="shadow" *ngFor="let video of videos">
-                <div class="card">
-                    <a routerLink="details/{{video.resourceId.videoId}}">
-                        <div class="img" style="background-image: url({{video.thumbnails.medium.url}})"></div>
-                        <div class="title">{{video.title}}</div>
-                    </a>
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+        <div class="video-card-caption">Cameroon 2022</div>
+        <div class="list-wrap">
+            <div class="card shadow" *ngFor="let video of videos | 
+                paginate: { 
+                    itemsPerPage: itemsPerPage, 
+                    currentPage: page, 
+                    totalItems: totalLength 
+                }">
+                <a routerLink="details/{{video.resourceId.videoId}}">
+                    <div class="img" style="background-image: url({{video.thumbnails.high.url}})"></div>
+                    <div class="title">{{video.title}}</div>
+                </a>
+            </div>
+        </div>
     </div>
+    <pagination-controls (pageChange)="page = $event" class="pagination"></pagination-controls>
 </div>

@@ -12,7 +12,16 @@ export class VideoCardComponent implements OnInit {
   constructor() { }
 
   @Input() 
-  videos: any
+  videos: any;
+
+  @Input() 
+  totalLength: number | undefined;
+
+  @Input() 
+  page: number | undefined;
+
+  @Input()
+  itemsPerPage: number | undefined;
 
   ngOnInit(): void {
     this.breakpoint = (window.innerWidth <= 1200) ? 2 : 3;

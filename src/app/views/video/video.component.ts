@@ -11,13 +11,17 @@ export class VideoComponent implements OnInit {
   videos: any[] = [];
   dataCount = 10
   breakpoint: number | undefined;
+  totalLength: number | undefined;
+  page: number = 1;
+  itemsPerPage: number = 4;
 
   constructor(private youTubeService: YoutubeService) { }
 
   ngOnInit() {
-    this.youTubeService.getData(this.dataCount).subscribe(lista => {
-      for (let element of lista["items"]) {
-        this.videos.push(element.snippet)
+    this.youTubeService.getData(this.dataCount).subscribe(videos => {
+      this.totalLength = videos.items.length;
+      for (let video of videos["items"]) {
+        this.videos.push(video.snippet)
       }
     });
     this.breakpoint = (window.innerWidth <= 1200) ? 1 : 2;

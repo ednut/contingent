@@ -25,21 +25,31 @@
         text-transform: capitalize;
         margin-bottom: 2rem;
     }
+    .list-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     .card{
         background-color: #fff;
+        width: 45%;
+        margin-bottom: 4rem;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
         a{
             text-decoration: none;
         }
         .img{
             width: auto;
-            min-height: 186px;
+            min-height: 230px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 3px 3px 0 0;
         }
         .title{
-            padding: 20px;
+            padding: 30px 20px;
             text-decoration: none;
             color: #333;
             font-weight: 600;
@@ -47,18 +57,25 @@
             line-height: 26px;
             text-align: center;
             border-radius: 0 0 4px 4px;
-            min-height: 7rem;
             @media (max-width: 991px) {
                 font-size: 14px;
                 padding: 10px;
-                min-height: 12rem;
             }
         }
     }
+    .shadow{
+        box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+    }
 }
-.mat-grid-tile-content{
-    display: block;
-}
-.shadow{
-    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+::ng-deep{
+
+    .pagination .ngx-pagination {
+        text-align: center;
+        margin-top: 2rem;
+        padding-left: 0;
+    }
+
+    .pagination .ngx-pagination .current {
+        background: #27963a;
+    }
 }

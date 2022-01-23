@@ -4,8 +4,8 @@ import { VideoDetailsComponent } from './views/video-details/video-details.compo
 import { VideoComponent } from './views/video/video.component';
 
 const routes: Routes = [
-  { path: '', component: VideoComponent },
-  { path: 'details/:id', component: VideoDetailsComponent }
+  { path: '', component: VideoComponent, data: { animation: 'isRight'} },
+  { path: 'details/:id', component: VideoDetailsComponent, data: { animation: 'isLeft'} }
 ];
 
 @NgModule({
