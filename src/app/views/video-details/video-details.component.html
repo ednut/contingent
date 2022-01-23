@@ -1,16 +1,14 @@
-<mat-grid-list *ngIf="details"
-    rowHeight="100vh"
-    gutterSize="0px" 
-    [cols]="2">
-
-    <mat-grid-tile class="width-60">
-        <iframe width="1280" height="720" [src]="url | safe" title="{{details.title}}" frameborder="0"></iframe>
-    </mat-grid-tile>
-
-    <mat-grid-tile class="width-40">
-        <div>
-            <h1>{{details.title}}</h1><hr>
-            <div>{{details.description}}</div>
+<div class="video-details" *ngIf="details">
+    <div class="video-details-home-button container">
+        <a routerLink="/"><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon></a>
+    </div>
+    <div class="video-details-video">
+        <div class="wrapper">
+            <iframe [src]="url | safe" title="{{details.title}}" frameborder="0"></iframe>
         </div>
-    </mat-grid-tile>
-</mat-grid-list>
+    </div>
+    <div class="video-details-wrapper container">
+        <div class="title">{{details.title}}</div>
+        <div class="details">{{details.description}}</div>
+    </div>
+</div>
